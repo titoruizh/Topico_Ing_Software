@@ -84,94 +84,52 @@ graph TD
 
 ```mermaid
 graph TD
-    START[🎯 PROCESO DE ASEGURAMIENTO DE CALIDAD]
-    
-    START --> ESTRATEGIA
-    
-    subgraph ESTRATEGIA[" "]
-        direction TB
-        A1[👔 ALTA DIRECCIÓN]
-        A1 --> A2[Define políticas y presupuesto de calidad]
-        A2 --> A3[Aprueba estándares organizacionales]
-    end
-    
-    ESTRATEGIA --> GESTION
-    
-    subgraph GESTION[" "]
-        direction TB
-        B1[👨‍💼 DIRECTOR DE CALIDAD]
-        B1 --> B2[Establece estrategia y métricas de QA]
-        B2 --> B3[Lidera equipo de aseguramiento]
-    end
-    
-    GESTION --> PROYECTO
-    
-    subgraph PROYECTO[" "]
-        direction TB
-        C1[📊 JEFE DE PROYECTO]
-        C1 --> C2[Integra QA en cronograma]
-        C2 --> C3[📝 PRODUCT OWNER]
-        C3 --> C4[Define criterios de aceptación]
-        C4 --> C5[🏗️ ARQUITECTO]
-        C5 --> C6[Establece estándares técnicos]
-    end
-    
-    PROYECTO --> DESARROLLO
-    
-    subgraph DESARROLLO[" "]
-        direction TB
-        D1[💻 EQUIPO DE DESARROLLO]
-        D1 --> D2[Implementa funcionalidades y unit tests]
-        D2 --> D3[Ejecuta code reviews]
-        D3 --> D4[🚀 INGENIERO DEVOPS]
-        D4 --> D5[Configura CI/CD con quality gates]
-    end
-    
-    DESARROLLO --> QA
-    
-    subgraph QA[" "]
-        direction TB
-        E1[🔍 EQUIPO DE QA]
-        E1 --> E2[Ejecuta auditorías de procesos]
-        E2 --> E3[Realiza pruebas funcionales y automatizadas]
-        E3 --> E4[Reporta defectos y valida correcciones]
-        E4 --> E5[🔐 ESPECIALISTA SEGURIDAD]
-        E5 --> E6[Ejecuta pruebas de seguridad SAST/DAST]
-    end
-    
-    QA --> REPORTE
-    
-    subgraph REPORTE[" "]
-        direction TB
-        F1[📊 ANALISTA DE MÉTRICAS]
-        F1 --> F2[Consolida KPIs y genera dashboards]
-        F2 --> F3[Analiza tendencias de calidad]
-    end
-    
-    REPORTE --> EXTERNOS
-    
-    subgraph EXTERNOS[" "]
-        direction TB
-        G1[🤝 CLIENTE]
-        G1 --> G2[Participa en UAT y aprueba releases]
-        G2 --> G3[✅ AUDITOR EXTERNO]
-        G3 --> G4[Valida compliance y emite certificaciones]
-    end
-    
-    EXTERNOS --> FIN
-    
-    FIN[🔄 MEJORA CONTINUA]
-    FIN -.->|Feedback| B1
-    
-    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:16px
-    style ESTRATEGIA fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#000
-    style GESTION fill:#1ABC9C,stroke:#148F77,stroke-width:3px,color:#000
-    style PROYECTO fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#000
-    style DESARROLLO fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
-    style QA fill:#E74C3C,stroke:#C0392B,stroke-width:3px,color:#000
-    style REPORTE fill:#9B59B6,stroke:#7D3C98,stroke-width:3px,color:#000
-    style EXTERNOS fill:#34495E,stroke:#2C3E50,stroke-width:3px,color:#FFF
-    style FIN fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF,font-size:16px
+    A[🎯 Proceso de Aseguramiento de Calidad]
+
+    A --> B[👔 Alta Dirección]
+    B --> B1[Define políticas y presupuesto]
+    B --> B2[Aprueba estándares]
+
+    A --> C[👨‍💼 Dirección de Calidad]
+    C --> C1[Estrategia y métricas]
+    C --> C2[Lidera equipo QA]
+
+    A --> D[📊 Jefe de Proyecto]
+    D --> D1[Integra QA en cronograma]
+    D --> D2[📝 Product Owner - Define criterios]
+    D --> D3[🏗️ Arquitecto - Estándares técnicos]
+
+    A --> E[💻 Desarrollo]
+    E --> E1[Implementación y unit tests]
+    E --> E2[Code reviews]
+    E --> E3[🚀 DevOps - CI/CD + quality gates]
+
+    A --> F[🔍 QA]
+    F --> F1[Auditorías de procesos]
+    F --> F2[Pruebas funcionales y automatizadas]
+    F --> F3[🔐 Seguridad - SAST/DAST]
+
+    A --> G[📊 Reporte de Métricas]
+    G --> G1[KPIs y dashboards]
+    G --> G2[Análisis de tendencias]
+
+    A --> H[🤝 Externos]
+    H --> H1[Cliente - UAT y releases]
+    H --> H2[✅ Auditor externo - Compliance]
+
+    H --> I[🔄 Mejora Continua]
+    I -.-> C
+
+    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
+    style B fill:#2980B9,stroke:#1F618D,color:#FFF
+    style C fill:#27AE60,stroke:#1E8449,color:#FFF
+    style D fill:#27AE60,stroke:#1E8449,color:#FFF
+    style E fill:#27AE60,stroke:#1E8449,color:#FFF
+    style F fill:#C0392B,stroke:#922B21,color:#FFF
+    style G fill:#9B59B6,stroke:#7D3C98,color:#FFF
+    style H fill:#7F8C8D,stroke:#626567,color:#FFF
+    style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
+
 ```
 
 # Diagrama 4
