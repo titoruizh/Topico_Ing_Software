@@ -83,77 +83,78 @@ graph TD
 # Diagrama 3
 
 ```mermaid
-graph TD
-    A[🎯 Proceso de Aseguramiento de Calidad]
+graph LR
+    %% Columnas por nivel
+    subgraph Col1[Alta Dirección]
+        B[👔 Alta Dirección]
+        B1[Define políticas y presupuesto]
+        B2[Aprueba estándares]
+        B --> B1
+        B --> B2
+    end
 
-    B[👔 Alta Dirección]
-    B1[Define políticas y presupuesto]
-    B2[Aprueba estándares]
+    subgraph Col2[Dirección de Calidad]
+        C[👨‍💼 Dirección de Calidad]
+        C1[Estrategia y métricas]
+        C2[Lidera equipo QA]
+        C --> C1
+        C --> C2
+    end
 
-    C[👨‍💼 Dirección de Calidad]
-    C1[Estrategia y métricas]
-    C2[Lidera equipo QA]
+    subgraph Col3[Jefes de Proyecto]
+        D[📊 Jefe de Proyecto]
+        D1[Integra QA en cronograma]
+        D2[📝 Product Owner - Define criterios]
+        D3[🏗️ Arquitecto - Estándares técnicos]
+        D --> D1
+        D --> D2
+        D --> D3
+    end
 
-    D[📊 Jefe de Proyecto]
-    D1[Integra QA en cronograma]
-    D2[📝 Product Owner - Define criterios]
-    D3[🏗️ Arquitecto - Estándares técnicos]
+    subgraph Col4[Desarrollo]
+        E[💻 Desarrollo]
+        E1[Implementación y unit tests]
+        E2[Code reviews]
+        E3[🚀 DevOps - CI/CD + quality gates]
+        E --> E1
+        E --> E2
+        E --> E3
+    end
 
-    E[💻 Desarrollo]
-    E1[Implementación y unit tests]
-    E2[Code reviews]
-    E3[🚀 DevOps - CI/CD + quality gates]
+    subgraph Col5[QA y Seguridad]
+        F[🔍 QA]
+        F1[Auditorías de procesos]
+        F2[Pruebas funcionales y automatizadas]
+        F3[🔐 Seguridad - SAST/DAST]
+        F --> F1
+        F --> F2
+        F --> F3
+    end
 
-    F[🔍 QA]
-    F1[Auditorías de procesos]
-    F2[Pruebas funcionales y automatizadas]
-    F3[🔐 Seguridad - SAST/DAST]
+    subgraph Col6[Reporte y Externos]
+        G[📊 Reporte de Métricas]
+        G1[KPIs y dashboards]
+        G2[Análisis de tendencias]
+        H[🤝 Externos]
+        H1[Cliente - UAT y releases]
+        H2[✅ Auditor externo - Compliance]
+        I[🔄 Mejora Continua]
+        G --> G1
+        G --> G2
+        H --> H1
+        H --> H2
+    end
 
-    G[📊 Reporte de Métricas]
-    G1[KPIs y dashboards]
-    G2[Análisis de tendencias]
-
-    H[🤝 Externos]
-    H1[Cliente - UAT y releases]
-    H2[✅ Auditor externo - Compliance]
-
-    I[🔄 Mejora Continua]
-
-    %% Jerarquía principal
-    A --> B
-    B --> B1
-    B --> B2
-    A --> C
-    C --> C1
-    C --> C2
-    A --> D
-    D --> D1
-    D --> D2
-    D --> D3
-    A --> E
-    E --> E1
-    E --> E2
-    E --> E3
-    A --> F
-    F --> F1
-    F --> F2
-    F --> F3
-    A --> G
-    G --> G1
-    G --> G2
-    A --> H
-    H --> H1
-    H --> H2
-    H --> I
-
-    %% Conexiones cruzadas
+    %% Conexiones principales
+    B --> C
     B --> D
     C --> D
     C --> E
     C --> F
-    F --> D
-    F --> E
+    D --> E
+    D --> F
     F --> D2
+    F --> E
     I -.-> B
     I -.-> C
     I -.-> D
@@ -162,7 +163,6 @@ graph TD
     I -.-> G
 
     %% Estilos
-    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
     style B fill:#2980B9,stroke:#1F618D,color:#FFF
     style C fill:#27AE60,stroke:#1E8449,color:#FFF
     style D fill:#27AE60,stroke:#1E8449,color:#FFF
