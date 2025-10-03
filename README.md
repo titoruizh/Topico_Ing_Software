@@ -84,51 +84,39 @@ graph TD
 
 ```mermaid
 graph TD
-    A[🎯 Proceso de Aseguramiento de Calidad]
+    A[🎩 Alta Dirección] --> B[🛡️ Dirección de Calidad]
+    A --> C[📂 Jefes de Proyecto]
+    
+    B --> D[⚙️ Equipo Técnico / Procesos]
+    C --> D
+    
+    B --- C  %% conexión lateral (colaboración directa)
+    
+    B --> E[📋 Normativas<br/>(ISO 9001, CMMI, GDPR)]
+    A --> F[🤝 Clientes / Stakeholders]
+    C --> F
+    
+    %% Nodo central mejora continua
+    D --> G[🔄 Mejora Continua]
+    B --> G
+    C --> G
+    A --> G
+    
+    %% Retroalimentación de mejora continua a todos
+    G --> A
+    G --> B
+    G --> C
+    G --> D
+    
+    %% Estilos
+    style A fill:#8E44AD,stroke:#6C3483,stroke-width:3px,color:#FFF,font-size:14px
+    style B fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#FFF
+    style C fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#FFF
+    style D fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
+    style E fill:#E67E22,stroke:#A04000,stroke-width:2px,color:#FFF
+    style F fill:#D35400,stroke:#873600,stroke-width:2px,color:#FFF
+    style G fill:#16A085,stroke:#0E6251,stroke-width:4px,color:#FFF,font-size:14px
 
-    A --> B[👔 Alta Dirección]
-    B --> B1[Define políticas y presupuesto]
-    B --> B2[Aprueba estándares]
-
-    A --> C[👨‍💼 Dirección de Calidad]
-    C --> C1[Estrategia y métricas]
-    C --> C2[Lidera equipo QA]
-
-    A --> D[📊 Jefe de Proyecto]
-    D --> D1[Integra QA en cronograma]
-    D --> D2[📝 Product Owner - Define criterios]
-    D --> D3[🏗️ Arquitecto - Estándares técnicos]
-
-    A --> E[💻 Desarrollo]
-    E --> E1[Implementación y unit tests]
-    E --> E2[Code reviews]
-    E --> E3[🚀 DevOps - CI/CD + quality gates]
-
-    A --> F[🔍 QA]
-    F --> F1[Auditorías de procesos]
-    F --> F2[Pruebas funcionales y automatizadas]
-    F --> F3[🔐 Seguridad - SAST/DAST]
-
-    A --> G[📊 Reporte de Métricas]
-    G --> G1[KPIs y dashboards]
-    G --> G2[Análisis de tendencias]
-
-    A --> H[🤝 Externos]
-    H --> H1[Cliente - UAT y releases]
-    H --> H2[✅ Auditor externo - Compliance]
-
-    H --> I[🔄 Mejora Continua]
-    I -.-> C
-
-    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
-    style B fill:#2980B9,stroke:#1F618D,color:#FFF
-    style C fill:#27AE60,stroke:#1E8449,color:#FFF
-    style D fill:#27AE60,stroke:#1E8449,color:#FFF
-    style E fill:#27AE60,stroke:#1E8449,color:#FFF
-    style F fill:#C0392B,stroke:#922B21,color:#FFF
-    style G fill:#9B59B6,stroke:#7D3C98,color:#FFF
-    style H fill:#7F8C8D,stroke:#626567,color:#FFF
-    style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
 
 ```
 
