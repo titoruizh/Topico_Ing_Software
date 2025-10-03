@@ -1,6 +1,7 @@
 # Aseguramiento de calidad de procesos y productos
 
-# Diagrama 1
+# Diagrama 1: Aseguramiento de Calidad de Procesos y Productos – Visión General
+## Este diagrama es la introducción conceptual, muestra el objetivo, propósito y notas clave de la gestión de calidad a nivel organizacional. Es general, estratégico y descriptivo.
 
 ```mermaid
 graph TD
@@ -28,7 +29,8 @@ graph TD
 
 ```
 
-# Diagrama 2
+# Diagrama 2: Ciclo de Aseguramiento de Calidad – Planificación y Evaluación
+## Aquí se muestra el flujo repetible del proceso QA, desde planificación hasta retroalimentación y mejora continua. Este es operativo, describe actividades, decisiones y entregables.
 
 ```mermaid
 graph TD
@@ -80,7 +82,8 @@ graph TD
 
 ```
 
-# Diagrama 3
+# Diagrama 3: Matriz de Responsabilidades y Participación en QA
+## Este diagrama detalla a los actores (Alta Dirección, Dirección de Calidad, Jefe de Proyecto, Dev, QA, externos) y su interacción, incluyendo la mejora continua. Es útil para entender quién hace qué y cómo se conectan los roles.
 
 ```mermaid
 graph TD
@@ -134,7 +137,8 @@ graph TD
 
 
 
-# Diagrama 4
+# Diagrama 4: Tecnología / Herramientas
+## Este último diagrama muestra la infraestructura y herramientas que soportan QA: dashboards, gestión de proyectos, análisis de código, pruebas, seguridad, CI/CD, datos y notificaciones. Es técnico y operativo.
 
 ```mermaid
 graph LR
