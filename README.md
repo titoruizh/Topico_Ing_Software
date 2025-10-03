@@ -3,34 +3,53 @@
 # Diagrama 1
 
 ```mermaid
-graph TD
-    A[ASEGURAMIENTO DE CALIDAD DE PROCESOS Y PRODUCTOS<br/>PPQA - Process and Product Quality Assurance]
+graph LR
+    START[🎯 ASEGURAMIENTO DE CALIDAD<br/>DE PROCESOS Y PRODUCTOS<br/>PPQA]
     
-    A --> B[OBJETIVO GENERAL]
-    A --> C[PROPÓSITO ESTRATÉGICO]
-    A --> D[NOTAS INTRODUCTORIAS]
+    START --> OBJ
+    START --> PROP
+    START --> NOTAS
     
-    B --> B1[Proporcionar al personal y la gerencia<br/>una visión objetiva de los procesos<br/>y productos de trabajo asociados]
-    B --> B2[Garantizar que los procesos definidos<br/>se ejecuten según lo planificado y<br/>cumplan con los estándares organizacionales]
-    B --> B3[Identificar y documentar incumplimientos<br/>en procesos y productos para su<br/>resolución oportuna]
-    B --> B4[Establecer mecanismos de retroalimentación<br/>que promuevan la mejora continua<br/>en toda la organización]
+    subgraph OBJ[" "]
+        direction TB
+        O1[📌 OBJETIVOS GENERALES]
+        O1 --> O2[Proporcionar visión objetiva<br/>de procesos y productos]
+        O2 --> O3[Garantizar cumplimiento<br/>de estándares organizacionales]
+        O3 --> O4[Identificar y documentar<br/>incumplimientos para resolución]
+        O4 --> O5[Establecer mecanismos de<br/>retroalimentación y mejora continua]
+    end
     
-    C --> C1[Reducir costos asociados a defectos<br/>y retrabajos mediante detección temprana<br/>de desviaciones - ROI: 300-500%]
-    C --> C2[Mantener conformidad con normativas<br/>ISO 9001, CMMI, ISO 27001, GDPR<br/>y regulaciones industriales específicas]
-    C --> C3[Incrementar la confianza del cliente<br/>en la capacidad de entrega de<br/>productos de alta calidad]
-    C --> C4[Habilitar certificaciones y auditorías<br/>externas que agreguen valor comercial<br/>y competitivo a la organización]
+    subgraph PROP[" "]
+        direction TB
+        P1[🎯 PROPÓSITO ESTRATÉGICO]
+        P1 --> P2[Reducir costos de defectos<br/>y retrabajos<br/>ROI: 300-500%]
+        P2 --> P3[Mantener conformidad con<br/>normativas ISO 9001, CMMI,<br/>ISO 27001, GDPR]
+        P3 --> P4[Incrementar confianza<br/>del cliente en calidad<br/>de entrega]
+        P4 --> P5[Habilitar certificaciones<br/>que agreguen valor<br/>comercial y competitivo]
+    end
     
-    D --> D1[CONTEXTO ORGANIZACIONAL:<br/>El PPQA opera como función transversal<br/>que atraviesa todos los proyectos<br/>y áreas de desarrollo de software]
-    D --> D2[MÉTRICAS CLAVE:<br/>- Esfuerzo: 8-12% del esfuerzo total del proyecto<br/>- Tiempo: Revisiones cada 2-4 semanas<br/>- Cobertura: 100% de hitos críticos]
-    D --> D3[ALCANCE:<br/>Incluye código fuente, documentación técnica,<br/>artefactos de diseño, casos de prueba,<br/>configuraciones, y entregables al cliente]
-    D --> D4[INDEPENDENCIA:<br/>El equipo QA debe reportar a nivel<br/>organizacional, no al gerente de proyecto,<br/>para garantizar objetividad y autonomía]
-    D --> D5[ENFOQUE PREVENTIVO Y CORRECTIVO:<br/>No solo detectar problemas sino prevenir<br/>su ocurrencia mediante capacitación,<br/>templates, checklists y automatización]
-    D --> D6[INTEGRACIÓN CONTINUA:<br/>Integrar QA en DevOps/CI-CD pipeline<br/>con gates de calidad automatizados<br/>y métricas en tiempo real]
+    subgraph NOTAS[" "]
+        direction TB
+        N1[📝 NOTAS INTRODUCTORIAS]
+        N1 --> N2[📊 CONTEXTO ORGANIZACIONAL<br/>Función transversal en todos<br/>los proyectos de desarrollo]
+        N2 --> N3[📈 MÉTRICAS CLAVE<br/>Esfuerzo: 8-12% del proyecto<br/>Revisiones: cada 2-4 semanas<br/>Cobertura: 100% hitos críticos]
+        N3 --> N4[🎯 ALCANCE<br/>Código, documentación, diseño,<br/>casos de prueba, configuraciones,<br/>entregables al cliente]
+        N4 --> N5[🔍 INDEPENDENCIA<br/>Equipo QA reporta a nivel<br/>organizacional para garantizar<br/>objetividad y autonomía]
+        N5 --> N6[🛡️ ENFOQUE PREVENTIVO<br/>Prevenir problemas mediante<br/>capacitación, templates,<br/>checklists y automatización]
+        N6 --> N7[🔄 INTEGRACIÓN CONTINUA<br/>QA integrado en DevOps/CI-CD<br/>con quality gates y métricas<br/>en tiempo real]
+    end
     
-    style A fill:#2C3E50,stroke:#E74C3C,stroke-width:4px,color:#ECF0F1
-    style B fill:#3498DB,stroke:#2980B9,stroke-width:3px,color:#FFF
-    style C fill:#27AE60,stroke:#229954,stroke-width:3px,color:#FFF
-    style D fill:#E67E22,stroke:#D35400,stroke-width:3px,color:#FFF
+    OBJ --> END
+    PROP --> END
+    NOTAS --> END
+    
+    END[✅ FRAMEWORK COMPLETO DE<br/>ASEGURAMIENTO DE CALIDAD]
+    
+    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:16px
+    style OBJ fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#000
+    style PROP fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#000
+    style NOTAS fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
+    style END fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF,font-size:16px
 ```
 
 # Diagrama 2
