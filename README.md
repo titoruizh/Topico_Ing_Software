@@ -83,7 +83,53 @@ graph TD
 # Diagrama 3
 
 ```mermaid
-graph TD A[🎯 Proceso de Aseguramiento de Calidad] A --> B[👔 Alta Dirección] B --> B1[Define políticas y presupuesto] B --> B2[Aprueba estándares] A --> C[👨‍💼 Dirección de Calidad] C --> C1[Estrategia y métricas] C --> C2[Lidera equipo QA] A --> D[📊 Jefe de Proyecto] D --> D1[Integra QA en cronograma] D --> D2[📝 Product Owner - Define criterios] D --> D3[🏗️ Arquitecto - Estándares técnicos] A --> E[💻 Desarrollo] E --> E1[Implementación y unit tests] E --> E2[Code reviews] E --> E3[🚀 DevOps - CI/CD + quality gates] A --> F[🔍 QA] F --> F1[Auditorías de procesos] F --> F2[Pruebas funcionales y automatizadas] F --> F3[🔐 Seguridad - SAST/DAST] A --> G[📊 Reporte de Métricas] G --> G1[KPIs y dashboards] G --> G2[Análisis de tendencias] A --> H[🤝 Externos] H --> H1[Cliente - UAT y releases] H --> H2[✅ Auditor externo - Compliance] H --> I[🔄 Mejora Continua] I -.-> C style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF style B fill:#2980B9,stroke:#1F618D,color:#FFF style C fill:#27AE60,stroke:#1E8449,color:#FFF style D fill:#27AE60,stroke:#1E8449,color:#FFF style E fill:#27AE60,stroke:#1E8449,color:#FFF style F fill:#C0392B,stroke:#922B21,color:#FFF style G fill:#9B59B6,stroke:#7D3C98,color:#FFF style H fill:#7F8C8D,stroke:#626567,color:#FFF style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
+graph TD
+    A[🎯 Proceso de Aseguramiento de Calidad]
+
+    A --> B[👔 Alta Dirección]
+    B --> B1[Define políticas y presupuesto]
+    B --> B2[Aprueba estándares]
+
+    A --> C[👨‍💼 Dirección de Calidad]
+    C --> C1[Estrategia y métricas]
+    C --> C2[Lidera equipo QA]
+
+    A --> D[📊 Jefe de Proyecto]
+    D --> D1[Integra QA en cronograma]
+    D --> D2[📝 Product Owner - Define criterios]
+    D --> D3[🏗️ Arquitecto - Estándares técnicos]
+
+    A --> E[💻 Desarrollo]
+    E --> E1[Implementación y unit tests]
+    E --> E2[Code reviews]
+    E --> E3[🚀 DevOps - CI/CD + quality gates]
+
+    A --> F[🔍 QA]
+    F --> F1[Auditorías de procesos]
+    F --> F2[Pruebas funcionales y automatizadas]
+    F --> F3[🔐 Seguridad - SAST/DAST]
+
+    A --> G[📊 Reporte de Métricas]
+    G --> G1[KPIs y dashboards]
+    G --> G2[Análisis de tendencias]
+
+    A --> H[🤝 Externos]
+    H --> H1[Cliente - UAT y releases]
+    H --> H2[✅ Auditor externo - Compliance]
+
+    H --> I[🔄 Mejora Continua]
+    I -.-> C
+
+    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
+    style B fill:#2980B9,stroke:#1F618D,color:#FFF
+    style C fill:#27AE60,stroke:#1E8449,color:#FFF
+    style D fill:#27AE60,stroke:#1E8449,color:#FFF
+    style E fill:#27AE60,stroke:#1E8449,color:#FFF
+    style F fill:#C0392B,stroke:#922B21,color:#FFF
+    style G fill:#9B59B6,stroke:#7D3C98,color:#FFF
+    style H fill:#7F8C8D,stroke:#626567,color:#FFF
+    style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
+
 ```
 
 
@@ -91,100 +137,80 @@ graph TD A[🎯 Proceso de Aseguramiento de Calidad] A --> B[👔 Alta Direcció
 # Diagrama 4
 
 ```mermaid
-graph TD
+graph LR
     START[🎯 STACK TECNOLÓGICO DE ASEGURAMIENTO DE CALIDAD]
-    
-    START --> CAPA1
-    
-    subgraph CAPA1[" "]
-        direction TB
-        A1[📊 DASHBOARDS Y REPORTES]
-        A1 --> A2[Power BI / Grafana]
-        A2 --> A3[Métricas en tiempo real y tendencias]
+
+    %% Dashboards
+    subgraph CAPA1["📊 DASHBOARDS Y REPORTES"]
+        A1[Power BI / Grafana]
+        A2[Métricas en tiempo real y tendencias]
+        A1 --> A2
     end
-    
-    CAPA1 --> CAPA2
-    
-    subgraph CAPA2[" "]
-        direction TB
-        B1[📋 GESTIÓN DE PROYECTOS]
-        B1 --> B2[JIRA / Azure DevOps]
-        B2 --> B3[Seguimiento de defectos y sprints]
-        B3 --> B4[TestRail / Zephyr]
-        B4 --> B5[Gestión de casos de prueba]
+
+    %% Gestión de proyectos
+    subgraph CAPA2["📋 GESTIÓN DE PROYECTOS"]
+        B1[JIRA / Azure DevOps]
+        B2[Seguimiento de defectos y sprints]
+        B3[TestRail / Zephyr - Gestión de casos de prueba]
+        B1 --> B2 --> B3
     end
-    
-    CAPA2 --> CAPA3
-    
-    subgraph CAPA3[" "]
-        direction TB
-        C1[💻 ANÁLISIS DE CÓDIGO]
-        C1 --> C2[SonarQube]
-        C2 --> C3[Code quality, cobertura >80%, quality gates]
-        C3 --> C4[GitHub / GitLab]
-        C4 --> C5[Code reviews y pull requests]
+
+    %% Análisis de código
+    subgraph CAPA3["💻 ANÁLISIS DE CÓDIGO"]
+        C1[SonarQube]
+        C2[Code quality, cobertura >80%, quality gates]
+        C3[GitHub / GitLab - Code reviews & PRs]
+        C1 --> C2 --> C3
     end
-    
-    CAPA3 --> CAPA4
-    
-    subgraph CAPA4[" "]
-        direction TB
-        D1[🧪 PRUEBAS AUTOMATIZADAS]
-        D1 --> D2[JUnit / pytest - Pruebas unitarias]
-        D2 --> D3[Postman / RestAssured - Pruebas de APIs]
-        D3 --> D4[Selenium / Cypress - Pruebas E2E]
-        D4 --> D5[JMeter / Gatling - Pruebas de rendimiento]
+
+    %% Pruebas automatizadas
+    subgraph CAPA4["🧪 PRUEBAS AUTOMATIZADAS"]
+        D1[JUnit / pytest - Unit tests]
+        D2[Postman / RestAssured - API tests]
+        D3[Selenium / Cypress - E2E]
+        D4[JMeter / Gatling - Rendimiento]
+        D1 --> D2 --> D3 --> D4
     end
-    
-    CAPA4 --> CAPA5
-    
-    subgraph CAPA5[" "]
-        direction TB
-        E1[🔐 SEGURIDAD]
-        E1 --> E2[Fortify / Checkmarx - SAST]
-        E2 --> E3[OWASP ZAP - DAST]
-        E3 --> E4[Snyk / Dependabot - Análisis de dependencias]
-        E4 --> E5[HashiCorp Vault - Gestión de secretos]
+
+    %% Seguridad
+    subgraph CAPA5["🔐 SEGURIDAD"]
+        E1[Fortify / Checkmarx - SAST]
+        E2[OWASP ZAP - DAST]
+        E3[Snyk / Dependabot - Análisis de dependencias]
+        E4[HashiCorp Vault - Gestión de secretos]
+        E1 --> E2 --> E3 --> E4
     end
-    
-    CAPA5 --> CAPA6
-    
-    subgraph CAPA6[" "]
-        direction TB
-        F1[🚀 CI/CD Y DESPLIEGUE]
-        F1 --> F2[Jenkins / GitHub Actions]
-        F2 --> F3[Pipeline automatizado con quality gates]
-        F3 --> F4[Docker / Kubernetes]
-        F4 --> F5[Contenedores y orquestación]
-        F5 --> F6[Prometheus / Datadog]
-        F6 --> F7[Monitoreo y observabilidad]
+
+    %% CI/CD y despliegue
+    subgraph CAPA6["🚀 CI/CD Y DESPLIEGUE"]
+        F1[Jenkins / GitHub Actions]
+        F2[Pipeline automatizado con quality gates]
+        F3[Docker / Kubernetes - Contenedores y orquestación]
+        F4[Prometheus / Datadog - Monitoreo]
+        F1 --> F2 --> F3 --> F4
     end
-    
-    CAPA6 --> CAPA7
-    
-    subgraph CAPA7[" "]
-        direction TB
-        G1[💾 DATOS Y CUMPLIMIENTO]
-        G1 --> G2[PostgreSQL / MongoDB - Bases de datos encriptadas]
-        G2 --> G3[TLS 1.3 / AES-256 - Encriptación]
-        G3 --> G4[OAuth 2.0 / JWT - Autenticación]
-        G4 --> G5[GDPR / ISO 27001 - Cumplimiento normativo]
+
+    %% Datos y cumplimiento
+    subgraph CAPA7["💾 DATOS Y CUMPLIMIENTO"]
+        G1[PostgreSQL / MongoDB - Bases encriptadas]
+        G2[TLS 1.3 / AES-256 - Encriptación]
+        G3[OAuth 2.0 / JWT - Autenticación]
+        G4[GDPR / ISO 27001 - Cumplimiento]
+        G1 --> G2 --> G3 --> G4
     end
-    
-    CAPA7 --> CAPA8
-    
-    subgraph CAPA8[" "]
-        direction TB
-        H1[🔔 NOTIFICACIONES]
-        H1 --> H2[Slack / MS Teams]
-        H2 --> H3[Alertas en tiempo real de issues y quality gates]
+
+    %% Notificaciones
+    subgraph CAPA8["🔔 NOTIFICACIONES"]
+        H1[Slack / MS Teams]
+        H2[Alertas en tiempo real de issues y quality gates]
+        H1 --> H2
     end
-    
-    CAPA8 --> FIN
-    
-    FIN[✅ CICLO COMPLETO INTEGRADO]
+
+    %% Conexiones horizontales y ciclo
+    START --> CAPA1 --> CAPA2 --> CAPA3 --> CAPA4 --> CAPA5 --> CAPA6 --> CAPA7 --> CAPA8 --> FIN[✅ CICLO COMPLETO INTEGRADO]
     FIN -.->|Métricas| A1
-    
+
+    %% Estilos
     style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:16px
     style CAPA1 fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#000
     style CAPA2 fill:#1ABC9C,stroke:#148F77,stroke-width:3px,color:#000
