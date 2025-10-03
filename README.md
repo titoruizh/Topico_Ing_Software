@@ -83,40 +83,104 @@ graph TD
 # Diagrama 3
 
 ```mermaid
+```mermaid
+%% Diagrama 3 - Actores y conexiones (PPQA)
 graph TD
-    A[🎩 Alta Dirección] --> B[🛡️ Dirección de Calidad]
-    A --> C[📂 Jefes de Proyecto]
-    
-    B --> D[⚙️ Equipo Técnico / Procesos]
-    C --> D
-    
-    B --- C  %% conexión lateral (colaboración directa)
-    
-    B --> E[📋 Normativas<br/>(ISO 9001, CMMI, GDPR)]
-    A --> F[🤝 Clientes / Stakeholders]
-    C --> F
-    
-    %% Nodo central mejora continua
-    D --> G[🔄 Mejora Continua]
-    B --> G
-    C --> G
-    A --> G
-    
-    %% Retroalimentación de mejora continua a todos
-    G --> A
-    G --> B
-    G --> C
-    G --> D
-    
-    %% Estilos
-    style A fill:#8E44AD,stroke:#6C3483,stroke-width:3px,color:#FFF,font-size:14px
-    style B fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#FFF
-    style C fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#FFF
-    style D fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
-    style E fill:#E67E22,stroke:#A04000,stroke-width:2px,color:#FFF
-    style F fill:#D35400,stroke:#873600,stroke-width:2px,color:#FFF
-    style G fill:#16A085,stroke:#0E6251,stroke-width:4px,color:#FFF,font-size:14px
+    %% Actores (etiquetas cortas con referencias numéricas)
+    A1[1. 🎩 Alta Dirección]
+    A2[2. 🛡️ Dirección de Calidad (PPQA)]
+    A3[3. 📂 Jefe(s) de Proyecto]
+    A4[4. 📊 Product Owner]
+    A5[5. 🏗️ Arquitecto Técnico]
+    A6[6. 💻 Equipo de Desarrollo]
+    A7[7. 🚀 DevOps / CI-CD]
+    A8[8. 🔍 Equipo QA]
+    A9[9. 🔐 Especialista Seguridad]
+    A10[10. 📈 Analista KPIs / Métricas]
+    A11[11. 🤝 Cliente / Usuarios]
+    A12[12. ✅ Auditor Externo / Compliance]
+    A13[13. 🔄 Mejora Continua (Kaizen)]
 
+    %% Jerarquía principal y enlaces
+    A1 --> A2
+    A1 --> A3
+    A2 --> A3
+    A3 --> A4
+    A3 --> A5
+    A3 --> A6
+    A6 --> A7
+    A6 --> A8
+    A7 --> A8
+    A9 --> A8
+    A8 --> A10
+    A10 --> A2
+    A11 --> A3
+    A11 --> A8
+    A12 --> A2
+
+    %% Conexiones cruzadas importantes
+    A2 --> A7
+    A2 --> A9
+    A1 --> A10
+    A5 --> A6
+    A5 --> A8
+    A8 --> A3
+    A7 --> A6
+    A9 --> A7
+
+    %% Mejora continua (retroalimentación)
+    A2 --> A13
+    A3 --> A13
+    A6 --> A13
+    A8 --> A13
+    A10 --> A13
+    A13 -.-> A2
+    A13 -.-> A3
+    A13 -.-> A6
+    A13 -.-> A8
+    A13 -.-> A10
+
+    %% Notas detalladas (todo el detalle se mantiene aquí, referenciado por número)
+    subgraph NOTAS["Notas detalladas (referencias por número)"]
+        direction TB
+        N1["1. Alta Dirección: Define políticas, aprueba presupuesto y objetivos estratégicos de calidad; decide escalamiento y métricas de negocio."]
+        N2["2. Dirección de Calidad (PPQA): Diseña QAP, define quality gates, planifica auditorías, mantiene independencia operativa para evaluación objetiva."]
+        N3["3. Jefe(s) de Proyecto: Integra QA en la planificación y cronograma, gestiona recursos, SLAs y comunicación con stakeholders y dirección."]
+        N4["4. Product Owner: Define criterios de aceptación, prioriza backlog según riesgo/valor, participa en UAT y decisiones de release."]
+        N5["5. Arquitecto Técnico: Establece estándares de arquitectura, patrones, performance y guías de seguridad aplicables al producto."]
+        N6["6. Equipo de Desarrollo: Implementa funcionalidades, unit/integration tests, code reviews; atiende defects y colabora con QA/DevOps."]
+        N7["7. DevOps / CI-CD: Configura pipelines, quality gates, despliegues reproducibles, rollbacks, secretos y monitoreo continuo."]
+        N8["8. Equipo QA: Auditorías de proceso, pruebas funcionales/automatizadas, regresión, UAT, gestión de incidencias y verificación de correcciones."]
+        N9["9. Especialista Seguridad: SAST/DAST, revisión de infra, gestión de secretos/tokens, encriptación, cumplimiento ISO27001/GDPR."]
+        N10["10. Analista KPIs: Consolida métricas (Defect Detection Rate, Escaped Defects, Test Coverage, Cycle Time), crea dashboards y alertas de tendencia."]
+        N11["11. Cliente/Usuarios: Participa en UAT, entrega feedback funcional y acepta releases según criterios acordados."]
+        N12["12. Auditor Externo: Valida compliance, emite certificaciones (ISO/CMMI), revisa evidencia y sugiere mejoras normativas."]
+        N13["13. Mejora Continua: Ciclo Kaizen -> convertir hallazgos en acciones (templates, trainings, actualización de procesos, automations)."]
+    end
+
+    %% Estilos (paleta sobria y legible)
+    classDef purple fill:#8E44AD,stroke:#6C3483,color:#fff;
+    classDef blue fill:#3498DB,stroke:#2874A6,color:#fff;
+    classDef green fill:#27AE60,stroke:#1E8449,color:#fff;
+    classDef orange fill:#F39C12,stroke:#CA6F1E,color:#000;
+    classDef red fill:#E74C3C,stroke:#C0392B,color:#fff;
+    classDef gray fill:#95A5A6,stroke:#707B7C,color:#fff;
+    classDef teal fill:#16A085,stroke:#117864,color:#fff;
+
+    class A1 purple
+    class A2 blue
+    class A3 green
+    class A4 green
+    class A5 orange
+    class A6 orange
+    class A7 orange
+    class A8 red
+    class A9 red
+    class A10 purple
+    class A11 gray
+    class A12 gray
+    class A13 teal
+```
 
 ```
 
