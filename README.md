@@ -33,53 +33,29 @@ graph LR
 ### Aquí se muestra el flujo repetible del proceso QA, desde planificación hasta retroalimentación y mejora continua. Este es operativo, describe actividades, decisiones y entregables.
 
 ```mermaid
-graph TD
-    A[🎯 INICIO DEL CICLO QA]
+graph LR
+    A[CICLO DE<br/>ASEGURAMIENTO<br/>DE CALIDAD] --> B[Planificación]
+    A --> C[Evaluación]
+    A --> D[Registro]
+    A --> E[Mejora<br/>Continua]
 
-    A --> B[📘 Planificación]
-    A --> C[🔍 Evaluación]
-    A --> D[📝 Registro]
-    A --> E[⚠️ Escalamiento]
-    A --> F[♻️ Mejora Continua]
-    A --> G{❓ ¿Continúa el proyecto?}
-    G -->|Sí| C
-    G -->|No| H[📦 Cierre]
+    B --> B1[Objetivos y<br/>criterios medibles]
+    B --> B2[Recursos y<br/>herramientas]
 
-    B --> B1[Definir objetivos QA]
-    B --> B2[Criterios medibles]
-    B --> B3[Procesos críticos]
-    B --> B4[Recursos y herramientas]
+    C --> C1[Auditoría de<br/>procesos]
+    C --> C2[Evaluación<br/>de productos]
 
-    C --> C1[Auditoría de procesos]
-    C --> C2[Evaluación de productos]
-    C --> C3[Revisiones en hitos]
+    D --> D1[Hallazgos y<br/>no conformidades]
+    D --> D2[Reportes<br/>ejecutivos]
 
-    D --> D1[Registrar hallazgos]
-    D --> D2[Clasificar no conformidades]
-    D --> D3[Reportes ejecutivos]
+    E --> E1[Analizar<br/>tendencias]
+    E --> E2[Actualizar<br/>procesos]
 
-    E --> E1[Comunicación al equipo]
-    E --> E2[Escalar a gerencia]
-    E --> E3[Resolución colaborativa]
-
-    F --> F1[Analizar tendencias]
-    F --> F2[Actualizar procesos]
-    F --> F3[Compartir buenas prácticas]
-    F --> F4[Medir KPIs]
-
-    H --> H1[Reporte final QA]
-    H --> H2[Archivar evidencias]
-    H --> H3[Retrospectiva con stakeholders]
-
-    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
+    style A fill:#2C3E50,stroke:#1A252F,stroke-width:2px,color:#FFF
     style B fill:#3498DB,stroke:#2874A6,color:#FFF
     style C fill:#27AE60,stroke:#1E8449,color:#FFF
     style D fill:#F39C12,stroke:#CA6F1E,color:#FFF
-    style E fill:#E74C3C,stroke:#C0392B,color:#FFF
-    style F fill:#16A085,stroke:#138D75,color:#FFF
-    style G fill:#E67E22,stroke:#BA4A00,color:#FFF
-    style H fill:#95A5A6,stroke:#707B7C,color:#FFF
-
+    style E fill:#16A085,stroke:#138D75,color:#FFF
 ```
 
 # Diagrama 3: Matriz de Responsabilidades y Participación en QA
