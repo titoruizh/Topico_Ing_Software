@@ -84,74 +84,90 @@ graph TD
 
 ```mermaid
 graph TD
-    A[🎯 Proceso de Aseguramiento de Calidad]
+    A[Proceso de Aseguramiento de Calidad]
 
-    %% Alta Dirección
-    A --> B[👔 Alta Dirección]
-    B --> B1[Define políticas y presupuesto]
-    B --> B2[Aprueba estándares]
+    B[Alta Dirección]
+    B1[Define políticas y presupuesto]
+    B2[Aprueba estándares]
 
-    %% Dirección de Calidad
-    A --> C[👨‍💼 Dirección de Calidad]
-    C --> C1[Estrategia y métricas]
-    C --> C2[Lidera equipo QA]
+    C[Dirección de Calidad]
+    C1[Estrategia y métricas]
+    C2[Lidera equipo QA]
 
-    %% Jefe de Proyecto
-    A --> D[📊 Jefe de Proyecto]
-    D --> D1[Integra QA en cronograma]
-    D --> D2[📝 Product Owner - Define criterios]
-    D --> D3[🏗️ Arquitecto - Estándares técnicos]
+    D[Jefe de Proyecto]
+    D1[Integra QA en cronograma]
+    D2[Product Owner - Define criterios]
+    D3[Arquitecto - Estándares técnicos]
 
-    %% Desarrollo
-    A --> E[💻 Desarrollo]
-    E --> E1[Implementación y unit tests]
-    E --> E2[Code reviews]
-    E --> E3[🚀 DevOps - CI/CD + quality gates]
+    E[Desarrollo]
+    E1[Implementación y unit tests]
+    E2[Code reviews]
+    E3[DevOps - CI/CD + quality gates]
 
-    %% QA
-    A --> F[🔍 QA]
-    F --> F1[Auditorías de procesos]
-    F --> F2[Pruebas funcionales y automatizadas]
-    F --> F3[🔐 Seguridad - SAST/DAST]
+    F[QA]
+    F1[Auditorías de procesos]
+    F2[Pruebas funcionales y automatizadas]
+    F3[Seguridad - SAST/DAST]
 
-    %% Reporte de métricas
-    A --> G[📊 Reporte de Métricas]
-    G --> G1[KPIs y dashboards]
-    G --> G2[Análisis de tendencias]
+    G[Reporte de Métricas]
+    G1[KPIs y dashboards]
+    G2[Análisis de tendencias]
 
-    %% Externos
-    A --> H[🤝 Externos]
-    H --> H1[Cliente - UAT y releases]
-    H --> H2[✅ Auditor externo - Compliance]
+    H[Externos]
+    H1[Cliente - UAT y releases]
+    H2[Auditor externo - Compliance]
 
-    %% Mejora Continua
-    H --> I[🔄 Mejora Continua]
+    I[Mejora Continua]
+
+    %% Conexiones jerárquicas
+    A --> B
+    B --> B1
+    B --> B2
+
+    A --> C
+    C --> C1
+    C --> C2
+
+    A --> D
+    D --> D1
+    D --> D2
+    D --> D3
+
+    A --> E
+    E --> E1
+    E --> E2
+    E --> E3
+
+    A --> F
+    F --> F1
+    F --> F2
+    F --> F3
+
+    A --> G
+    G --> G1
+    G --> G2
+
+    A --> H
+    H --> H1
+    H --> H2
+
+    H --> I
 
     %% Conexiones cruzadas
-    B --> D   %% Alta Dirección ↔ Jefe de Proyecto
-    C --> D   %% Dirección de Calidad ↔ Jefe de Proyecto
-    C --> E   %% Dirección de Calidad ↔ Desarrollo
-    C --> F   %% Dirección de Calidad ↔ QA
-    F --> D   %% QA ↔ Jefe de Proyecto
-    F --> E   %% QA ↔ Desarrollo
-    F --> D2  %% QA ↔ Product Owner
-    I -.-> B  %% Mejora Continua retroalimenta Alta Dirección
-    I -.-> C  %% Mejora Continua retroalimenta Dirección de Calidad
-    I -.-> D  %% Mejora Continua retroalimenta Jefe de Proyecto
-    I -.-> E  %% Mejora Continua retroalimenta Desarrollo
-    I -.-> F  %% Mejora Continua retroalimenta QA
-    I -.-> G  %% Mejora Continua retroalimenta Reporte
+    B --> D
+    C --> D
+    C --> E
+    C --> F
+    F --> D
+    F --> E
+    F --> D2
+    I -.-> B
+    I -.-> C
+    I -.-> D
+    I -.-> E
+    I -.-> F
+    I -.-> G
 
-    %% Estilos
-    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
-    style B fill:#2980B9,stroke:#1F618D,color:#FFF
-    style C fill:#27AE60,stroke:#1E8449,color:#FFF
-    style D fill:#27AE60,stroke:#1E8449,color:#FFF
-    style E fill:#27AE60,stroke:#1E8449,color:#FFF
-    style F fill:#C0392B,stroke:#922B21,color:#FFF
-    style G fill:#9B59B6,stroke:#7D3C98,color:#FFF
-    style H fill:#7F8C8D,stroke:#626567,color:#FFF
-    style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
 ```
 
 
