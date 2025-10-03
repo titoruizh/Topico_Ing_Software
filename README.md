@@ -3,53 +3,29 @@
 # Diagrama 1
 
 ```mermaid
-graph LR
-    START[🎯 ASEGURAMIENTO DE CALIDAD<br/>PROCESOS Y PRODUCTOS]
-    
-    START --> OBJ
-    START --> PROP
-    START --> NOTAS
-    
-    subgraph OBJ[" "]
-        direction TB
-        O1[📌 OBJETIVOS]
-        O1 --> O2[✓ Visión objetiva de procesos]
-        O2 --> O3[✓ Cumplimiento de estándares]
-        O3 --> O4[✓ Identificar incumplimientos]
-        O4 --> O5[✓ Mejora continua]
-    end
-    
-    subgraph PROP[" "]
-        direction TB
-        P1[🎯 PROPÓSITO]
-        P1 --> P2[💰 ROI: 300-500%<br/>Reducción de retrabajos]
-        P2 --> P3[📋 Compliance<br/>ISO 9001, CMMI, GDPR]
-        P3 --> P4[🤝 Confianza del cliente]
-        P4 --> P5[⭐ Certificaciones comerciales]
-    end
-    
-    subgraph NOTAS[" "]
-        direction TB
-        N1[📝 DATOS CLAVE]
-        N1 --> N2[📊 Esfuerzo: 8-12%<br/>del proyecto total]
-        N2 --> N3[⏱️ Revisiones cada<br/>2-4 semanas]
-        N3 --> N4[🎯 Cobertura: 100%<br/>de hitos críticos]
-        N4 --> N5[🔍 Independencia<br/>organizacional]
-        N5 --> N6[🛡️ Enfoque preventivo<br/>y automatizado]
-        N6 --> N7[🔄 Integrado en<br/>DevOps/CI-CD]
-    end
-    
-    OBJ --> END
-    PROP --> END
-    NOTAS --> END
-    
-    END[✅ FRAMEWORK PPQA COMPLETO]
-    
-    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:14px
-    style OBJ fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#000
-    style PROP fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#000
-    style NOTAS fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
-    style END fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF,font-size:14px
+graph TD
+    A[🎯 ASEGURAMIENTO DE CALIDAD<br/>PROCESOS Y PRODUCTOS]
+    A --> B1[📌 OBJETIVOS]
+    A --> B2[🎯 PROPÓSITO]
+    A --> B3[📝 NOTAS CLAVE]
+
+    B1 --> C1[Visión objetiva de procesos]
+    B1 --> C2[Cumplimiento de estándares]
+    B1 --> C3[Mejora continua]
+
+    B2 --> C4[Reducción de retrabajos]
+    B2 --> C5[Compliance ISO/CMMI/GDPR]
+    B2 --> C6[Confianza del cliente]
+
+    B3 --> C7[Esfuerzo: 8-12% del proyecto]
+    B3 --> C8[Revisiones periódicas]
+    B3 --> C9[Integrado en DevOps/CI-CD]
+
+    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
+    style B1 fill:#3498DB,stroke:#2874A6,color:#FFF
+    style B2 fill:#27AE60,stroke:#1E8449,color:#FFF
+    style B3 fill:#E67E22,stroke:#CA6F1E,color:#FFF
+
 ```
 
 # Diagrama 2
