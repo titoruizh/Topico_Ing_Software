@@ -62,53 +62,45 @@ graph LR
 ### Este diagrama detalla a los actores (Alta Dirección, Dirección de Calidad, Jefe de Proyecto, Dev, QA, externos) y su interacción, incluyendo la mejora continua. Es útil para entender quién hace qué y cómo se conectan los roles.
 
 ```mermaid
-graph TD
-    A[🎯 Proceso de Aseguramiento de Calidad]
-
+graph LR
+    A[🎯 ASEGURAMIENTO<br/>DE CALIDAD]
+    
     A --> B[👔 Alta Dirección]
-    B --> B1[Define políticas y presupuesto]
-    B --> B2[Aprueba estándares]
-
-    A --> C[👨‍💼 Dirección de Calidad]
-    C --> C1[Estrategia y métricas]
-    C --> C2[Lidera equipo QA]
-
-    A --> D[📊 Jefe de Proyecto]
-    D --> D1[Integra QA en cronograma]
-    D --> D2[📝 Product Owner - Define criterios]
-    D --> D3[🏗️ Arquitecto - Estándares técnicos]
-
+    A --> C[👨‍💼 Dirección QA]
+    A --> D[📊 Jefe Proyecto]
     A --> E[💻 Desarrollo]
-    E --> E1[Implementación y unit tests]
-    E --> E2[Code reviews]
-    E --> E3[🚀 DevOps - CI/CD + quality gates]
-
-    A --> F[🔍 QA]
-    F --> F1[Auditorías de procesos]
-    F --> F2[Pruebas funcionales y automatizadas]
-    F --> F3[🔐 Seguridad - SAST/DAST]
-
-    A --> G[📊 Reporte de Métricas]
-    G --> G1[KPIs y dashboards]
-    G --> G2[Análisis de tendencias]
-
+    A --> F[🔍 Equipo QA]
     A --> H[🤝 Externos]
-    H --> H1[Cliente - UAT y releases]
-    H --> H2[✅ Auditor externo - Compliance]
-
-    H --> I[🔄 Mejora Continua]
-    I -.-> C
-
+    
+    B --> B1[Políticas y presupuesto]
+    
+    C --> C1[Estrategia y métricas]
+    C --> C2[Dirección equipo QA]
+    
+    D --> D1[Integra QA en cronograma]
+    D --> D2[Define criterios de aceptación]
+    
+    E --> E1[Unit tests]
+    E --> E2[CI/CD + quality gates]
+    
+    F --> F1[Auditorías]
+    F --> F2[Testing funcional]
+    F --> F3[Reportes de métricas]
+    
+    H --> H1[Cliente - UAT]
+    H --> H2[Auditor - Compliance]
+    
+    F --> I[🔄 Mejora Continua]
+    I --> A
+    
     style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
     style B fill:#2980B9,stroke:#1F618D,color:#FFF
     style C fill:#27AE60,stroke:#1E8449,color:#FFF
-    style D fill:#27AE60,stroke:#1E8449,color:#FFF
-    style E fill:#27AE60,stroke:#1E8449,color:#FFF
+    style D fill:#E67E22,stroke:#BA4A00,color:#FFF
+    style E fill:#9B59B6,stroke:#7D3C98,color:#FFF
     style F fill:#C0392B,stroke:#922B21,color:#FFF
-    style G fill:#9B59B6,stroke:#7D3C98,color:#FFF
     style H fill:#7F8C8D,stroke:#626567,color:#FFF
     style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
-
 ```
 
 
