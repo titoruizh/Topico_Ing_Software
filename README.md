@@ -84,73 +84,66 @@ graph TD
 
 ```mermaid
 graph TD
-    A[Proceso de Aseguramiento de Calidad]
+    A[🎯 Proceso de Aseguramiento de Calidad]
 
-    B[Alta Dirección]
+    B[👔 Alta Dirección]
     B1[Define políticas y presupuesto]
     B2[Aprueba estándares]
 
-    C[Dirección de Calidad]
+    C[👨‍💼 Dirección de Calidad]
     C1[Estrategia y métricas]
     C2[Lidera equipo QA]
 
-    D[Jefe de Proyecto]
+    D[📊 Jefe de Proyecto]
     D1[Integra QA en cronograma]
-    D2[Product Owner - Define criterios]
-    D3[Arquitecto - Estándares técnicos]
+    D2[📝 Product Owner - Define criterios]
+    D3[🏗️ Arquitecto - Estándares técnicos]
 
-    E[Desarrollo]
+    E[💻 Desarrollo]
     E1[Implementación y unit tests]
     E2[Code reviews]
-    E3[DevOps - CI/CD + quality gates]
+    E3[🚀 DevOps - CI/CD + quality gates]
 
-    F[QA]
+    F[🔍 QA]
     F1[Auditorías de procesos]
     F2[Pruebas funcionales y automatizadas]
-    F3[Seguridad - SAST/DAST]
+    F3[🔐 Seguridad - SAST/DAST]
 
-    G[Reporte de Métricas]
+    G[📊 Reporte de Métricas]
     G1[KPIs y dashboards]
     G2[Análisis de tendencias]
 
-    H[Externos]
+    H[🤝 Externos]
     H1[Cliente - UAT y releases]
-    H2[Auditor externo - Compliance]
+    H2[✅ Auditor externo - Compliance]
 
-    I[Mejora Continua]
+    I[🔄 Mejora Continua]
 
-    %% Conexiones jerárquicas
+    %% Jerarquía principal
     A --> B
     B --> B1
     B --> B2
-
     A --> C
     C --> C1
     C --> C2
-
     A --> D
     D --> D1
     D --> D2
     D --> D3
-
     A --> E
     E --> E1
     E --> E2
     E --> E3
-
     A --> F
     F --> F1
     F --> F2
     F --> F3
-
     A --> G
     G --> G1
     G --> G2
-
     A --> H
     H --> H1
     H --> H2
-
     H --> I
 
     %% Conexiones cruzadas
@@ -168,6 +161,16 @@ graph TD
     I -.-> F
     I -.-> G
 
+    %% Estilos
+    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
+    style B fill:#2980B9,stroke:#1F618D,color:#FFF
+    style C fill:#27AE60,stroke:#1E8449,color:#FFF
+    style D fill:#27AE60,stroke:#1E8449,color:#FFF
+    style E fill:#27AE60,stroke:#1E8449,color:#FFF
+    style F fill:#C0392B,stroke:#922B21,color:#FFF
+    style G fill:#9B59B6,stroke:#7D3C98,color:#FFF
+    style H fill:#7F8C8D,stroke:#626567,color:#FFF
+    style I fill:#16A085,stroke:#117864,stroke-width:3px,color:#FFF
 ```
 
 
