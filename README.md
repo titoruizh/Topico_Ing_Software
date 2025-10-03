@@ -1,4 +1,4 @@
-# Topico_Ing_Software
+# Aseguramiento de calidad de procesos y productos
 
 # Diagrama 1
 
