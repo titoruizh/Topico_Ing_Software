@@ -1,5 +1,6 @@
 # Topico_Ing_Software
 
+```mermaid
 graph TD
     A[ASEGURAMIENTO DE CALIDAD DE PROCESOS Y PRODUCTOS<br/>PPQA - Process and Product Quality Assurance]
     
