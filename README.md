@@ -4,7 +4,7 @@
 
 ```mermaid
 graph LR
-    START[🎯 ASEGURAMIENTO DE CALIDAD<br/>DE PROCESOS Y PRODUCTOS<br/>PPQA]
+    START[🎯 ASEGURAMIENTO DE CALIDAD<br/>PROCESOS Y PRODUCTOS]
     
     START --> OBJ
     START --> PROP
@@ -12,44 +12,44 @@ graph LR
     
     subgraph OBJ[" "]
         direction TB
-        O1[📌 OBJETIVOS GENERALES]
-        O1 --> O2[Proporcionar visión objetiva<br/>de procesos y productos]
-        O2 --> O3[Garantizar cumplimiento<br/>de estándares organizacionales]
-        O3 --> O4[Identificar y documentar<br/>incumplimientos para resolución]
-        O4 --> O5[Establecer mecanismos de<br/>retroalimentación y mejora continua]
+        O1[📌 OBJETIVOS]
+        O1 --> O2[✓ Visión objetiva de procesos]
+        O2 --> O3[✓ Cumplimiento de estándares]
+        O3 --> O4[✓ Identificar incumplimientos]
+        O4 --> O5[✓ Mejora continua]
     end
     
     subgraph PROP[" "]
         direction TB
-        P1[🎯 PROPÓSITO ESTRATÉGICO]
-        P1 --> P2[Reducir costos de defectos<br/>y retrabajos<br/>ROI: 300-500%]
-        P2 --> P3[Mantener conformidad con<br/>normativas ISO 9001, CMMI,<br/>ISO 27001, GDPR]
-        P3 --> P4[Incrementar confianza<br/>del cliente en calidad<br/>de entrega]
-        P4 --> P5[Habilitar certificaciones<br/>que agreguen valor<br/>comercial y competitivo]
+        P1[🎯 PROPÓSITO]
+        P1 --> P2[💰 ROI: 300-500%<br/>Reducción de retrabajos]
+        P2 --> P3[📋 Compliance<br/>ISO 9001, CMMI, GDPR]
+        P3 --> P4[🤝 Confianza del cliente]
+        P4 --> P5[⭐ Certificaciones comerciales]
     end
     
     subgraph NOTAS[" "]
         direction TB
-        N1[📝 NOTAS INTRODUCTORIAS]
-        N1 --> N2[📊 CONTEXTO ORGANIZACIONAL<br/>Función transversal en todos<br/>los proyectos de desarrollo]
-        N2 --> N3[📈 MÉTRICAS CLAVE<br/>Esfuerzo: 8-12% del proyecto<br/>Revisiones: cada 2-4 semanas<br/>Cobertura: 100% hitos críticos]
-        N3 --> N4[🎯 ALCANCE<br/>Código, documentación, diseño,<br/>casos de prueba, configuraciones,<br/>entregables al cliente]
-        N4 --> N5[🔍 INDEPENDENCIA<br/>Equipo QA reporta a nivel<br/>organizacional para garantizar<br/>objetividad y autonomía]
-        N5 --> N6[🛡️ ENFOQUE PREVENTIVO<br/>Prevenir problemas mediante<br/>capacitación, templates,<br/>checklists y automatización]
-        N6 --> N7[🔄 INTEGRACIÓN CONTINUA<br/>QA integrado en DevOps/CI-CD<br/>con quality gates y métricas<br/>en tiempo real]
+        N1[📝 DATOS CLAVE]
+        N1 --> N2[📊 Esfuerzo: 8-12%<br/>del proyecto total]
+        N2 --> N3[⏱️ Revisiones cada<br/>2-4 semanas]
+        N3 --> N4[🎯 Cobertura: 100%<br/>de hitos críticos]
+        N4 --> N5[🔍 Independencia<br/>organizacional]
+        N5 --> N6[🛡️ Enfoque preventivo<br/>y automatizado]
+        N6 --> N7[🔄 Integrado en<br/>DevOps/CI-CD]
     end
     
     OBJ --> END
     PROP --> END
     NOTAS --> END
     
-    END[✅ FRAMEWORK COMPLETO DE<br/>ASEGURAMIENTO DE CALIDAD]
+    END[✅ FRAMEWORK PPQA COMPLETO]
     
-    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:16px
+    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:14px
     style OBJ fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#000
     style PROP fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#000
     style NOTAS fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
-    style END fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF,font-size:16px
+    style END fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF,font-size:14px
 ```
 
 # Diagrama 2
