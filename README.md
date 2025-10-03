@@ -4,31 +4,29 @@
 ### Este diagrama es la introducción conceptual, muestra el objetivo, propósito y notas clave de la gestión de calidad a nivel organizacional. Es general, estratégico y descriptivo.
 
 ```mermaid
-graph TD
-    A[Aseguramiento de Calidad<br>Procesos y Productos] --> B1[Objetivos]
-    A --> B2[Propósito]
-    A --> B3[Aspectos Clave]
+graph LR
+    A[🎯 ASEGURAMIENTO DE CALIDAD<br/>PROCESOS Y PRODUCTOS]
+    
+    A --> B1[📌 OBJETIVOS]
+    A --> B2[🎯 PROPÓSITO]
+    A --> B3[📝 NOTAS CLAVE]
 
-    B1 --> C1[Evaluación objetiva de procesos]
-    B1 --> C2[Garantizar estándares de calidad]
-    B1 --> C3[Promover mejora continua]
+    B1 --> C1[Visión objetiva de procesos]
+    B1 --> C2[Cumplimiento de estándares]
+    B1 --> C3[Mejora continua]
 
-    B2 --> C4[Minimizar defectos y retrabajos]
-    B2 --> C5[Asegurar conformidad normativa]
-    B2 --> C6[Aumentar satisfacción del cliente]
+    B2 --> C4[Reducción de retrabajos]
+    B2 --> C5[Compliance ISO/CMMI/GDPR]
+    B2 --> C6[Confianza del cliente]
 
-    B3 --> C7[Inversión: 8-12% del presupuesto]
-    B3 --> C8[Control mediante auditorías periódicas]
-    B3 --> C9[Integración con DevOps/CI-CD]
+    B3 --> C7[Esfuerzo: 8-12% del proyecto]
+    B3 --> C8[Revisiones periódicas]
+    B3 --> C9[Integrado en DevOps/CI-CD]
 
-    classDef principal fill:#1A365D,stroke:#0A1C3D,color:white,stroke-width:2px
-    classDef categoria fill:#2A6EBB,stroke:#1A4D8A,color:white,stroke-width:1px
-    classDef elemento fill:#F8F9FA,stroke:#DEE2E6,color:#343A40,stroke-width:1px
-
-    class A principal
-    class B1,B2,B3 categoria
-    class C1,C2,C3,C4,C5,C6,C7,C8,C9 elemento
-
+    style A fill:#2C3E50,stroke:#1A252F,stroke-width:4px,color:#FFF
+    style B1 fill:#3498DB,stroke:#2874A6,color:#FFF
+    style B2 fill:#27AE60,stroke:#1E8449,color:#FFF
+    style B3 fill:#E67E22,stroke:#CA6F1E,color:#FFF
 ```
 
 # Diagrama 2: Ciclo de Aseguramiento de Calidad – Planificación y Evaluación
