@@ -110,70 +110,42 @@ graph LR
 
 ```mermaid
 graph LR
-    START[🎯 HERRAMIENTAS PARA ASEGURAMIENTO<br/>DE CALIDAD]
+    START[🎯 STACK TECNOLÓGICO DE QA]
 
-    subgraph CAPA1["📊 VISUALIZACIÓN Y REPORTES"]
-        A1[Tableros de control]
-        A2[Informes de avance]
-        A1 --> A2
-    end
+    %% Agrupando herramientas por áreas clave
+    START --> A[📊 Visualización]
+    START --> B[🛠️ Gestión]
+    START --> C[📏 Código]
+    START --> D[🧪 Testing]
+    
+    A --> A1[Power BI / Grafana<br>Métricas en tiempo real]
+    
+    B --> B1[JIRA / Azure DevOps<br>TestRail / Zephyr]
+    
+    C --> C1[SonarQube<br>GitHub / GitLab]
+    
+    D --> D1[JUnit / Selenium<br>Postman / JMeter]
 
-    subgraph CAPA2["📋 GESTIÓN Y SEGUIMIENTO"]
-        B1[Sistemas de gestión de proyectos]
-        B2[Seguimiento de incidencias]
-        B3[Gestión de casos de prueba]
-        B1 --> B2 --> B3
-    end
+    %% Seguridad y despliegue
+    START --> E[🔐 Seguridad]
+    START --> F[🚀 CI/CD]
+    
+    E --> E1[Fortify / OWASP ZAP<br>Snyk / Vault]
+    
+    F --> F1[Jenkins / GitHub Actions<br>Docker / Kubernetes]
+    
+    %% Ciclo completo
+    F1 --> FIN[✅ Monitoreo y alerta<br>Prometheus / Slack]
+    FIN -.->|Retroalimentación| A1
 
-    subgraph CAPA3["💻 VERIFICACIÓN DE CÓDIGO"]
-        C1[Herramientas de revisión]
-        C2[Control de calidad automático]
-        C1 --> C2
-    end
-
-    subgraph CAPA4["🧪 PRUEBAS"]
-        D1[Pruebas unitarias]
-        D2[Pruebas de integración]
-        D3[Pruebas de sistema]
-        D1 --> D2 --> D3
-    end
-
-    subgraph CAPA5["🔐 PROTECCIÓN"]
-        E1[Análisis de vulnerabilidades]
-        E2[Gestión de accesos]
-        E1 --> E2
-    end
-
-    subgraph CAPA6["🚀 AUTOMATIZACIÓN"]
-        F1[Integración continua]
-        F2[Despliegue automatizado]
-        F1 --> F2
-    end
-
-    subgraph CAPA7["💾 DOCUMENTACIÓN"]
-        G1[Base de conocimientos]
-        G2[Registros de cumplimiento]
-        G1 --> G2
-    end
-
-    subgraph CAPA8["🔔 COMUNICACIÓN"]
-        H1[Canales de comunicación]
-        H2[Alertas y notificaciones]
-        H1 --> H2
-    end
-
-    START --> CAPA1 --> CAPA2 --> CAPA3 --> CAPA4 --> CAPA5 --> CAPA6 --> CAPA7 --> CAPA8 --> FIN[✅ CICLO INTEGRADO]
-    FIN -.->|Retroalimentación| CAPA1
-
-    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF,font-size:16px
-    style CAPA1 fill:#3498DB,stroke:#2874A6,stroke-width:3px,color:#000
-    style CAPA2 fill:#1ABC9C,stroke:#148F77,stroke-width:3px,color:#000
-    style CAPA3 fill:#27AE60,stroke:#1E8449,stroke-width:3px,color:#000
-    style CAPA4 fill:#F39C12,stroke:#CA6F1E,stroke-width:3px,color:#000
-    style CAPA5 fill:#E74C3C,stroke:#C0392B,stroke-width:3px,color:#FFF
-    style CAPA6 fill:#9B59B6,stroke:#7D3C98,stroke-width:3px,color:#FFF
-    style CAPA7 fill:#E67E22,stroke:#BA4A00,stroke-width:3px,color:#FFF
-    style CAPA8 fill:#34495E,stroke:#2C3E50,stroke-width:3px,color:#FFF
-    style FIN fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF,font-size:16px
+    %% Estilos
+    style START fill:#8E44AD,stroke:#6C3483,stroke-width:4px,color:#FFF
+    style A fill:#3498DB,stroke:#2874A6,color:#FFF
+    style B fill:#1ABC9C,stroke:#148F77,color:#FFF
+    style C fill:#27AE60,stroke:#1E8449,color:#FFF
+    style D fill:#F39C12,stroke:#CA6F1E,color:#FFF
+    style E fill:#E74C3C,stroke:#C0392B,color:#FFF
+    style F fill:#9B59B6,stroke:#7D3C98,color:#FFF
+    style FIN fill:#16A085,stroke:#138D75,stroke-width:4px,color:#FFF
 ```
     
